@@ -1,0 +1,122 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+  /* --light: #FFF8EE; */
+  --dark: #241400;
+  --primary: #FFF8EE;
+
+}
+
+main {
+  display: flex;
+  background-image: url(./media/Background.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100dvh;
+  color: var(--primary);
+  justify-content: end;
+}
+
+
+
+form {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(30rem, 40%, 55rem);
+  backdrop-filter: blur(24px);
+  border-radius: 2rem 0 0 2rem;
+}
+
+fieldset {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border: none;
+}
+
+legend {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+}
+
+.form-group:not(.lined-group) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input:not(.lined-group input) {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--primary);
+  color: var(--primary) !important;
+  outline: none;
+  font-size: 1rem;
+  height: 1.5rem;
+  transition: height 0.15s;
+}
+
+label:not(.lined-group label) {
+  font-size: 1.2rem;
+}
+
+input:not(.lined-group input):focus {
+  height: 2.5rem;
+  background-color: transparent;
+}
+
+.lined-group input {
+  accent-color: var(--primary);
+  
+}
+
+.lined-group a {
+  color: var(--primary);
+}
+
+form button {
+  background-color: var(--primary);
+  border: none;
+  padding: 0.4em 0;
+  font-size: 1.2rem;
+  color: var(--dark);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+
+form button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: var(--dark);
+  height: 0%;
+  width: 100%;
+  z-index: -1;
+}
+
+form button, form button::before {
+  transition: 0.15s ease-in;
+}
+
+form button:hover::before {
+  height: 100%;
+}
+
+form button:hover {
+  color: var(--primary);
+}
+
