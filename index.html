@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Sign up</legend>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email"
+            pattern=".*@.*\..*"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" minlength="2" maxlength="15" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" min="6" max="20" required>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="agreement" id="agreement" required>
+          <label for="agreement">by signing up you agree to our <span>Terms and conditions</span></label>
+        </div>
+        <button>submit</button>
+      </fieldset>
+    </form>
+  </main>
+</body>
+</html>
